@@ -1,4 +1,4 @@
-#include "main.c"
+#include "main.h"
 
 
 int handler(const char *format, list_t list[], va_list arg)
