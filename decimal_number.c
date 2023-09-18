@@ -9,7 +9,7 @@
 int print_decimal(va_list arg)
 {
 	int count = 0;
-	int remainder;
+	int div = 1;
 	int n;
 
 	n = var_arg(arg, int)
@@ -18,11 +18,14 @@ int print_decimal(va_list arg)
 		count += my_putchar('-');
 		n = n * -1;
 	}
-	while (n != 0)
+	while (n / div > 9)
 	{
-		remainder = n % 10;
-		count += my_putchar('0' + remainder);
-		n /= 10;
+		div *= 10;
 	}
+	while(div != 0)
+	{
+		count += my_putchar('0' + num / div);
+		num %= div;
+		div /= 10;
 	return (count);
 }
