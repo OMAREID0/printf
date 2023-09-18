@@ -22,11 +22,16 @@ int handler(const char *format, list_t list[], va_list arg)
 					break;
 				}
 			}
-			if (list[j].spec == NULL)
+			if (list[j].spec == NULL && format[i + 1] != ' ')
 			{
-				my_putchar(format[i]);
-				my_putchar(format[i + 1]);
-				counter = counter + 2;
+				if (format[i + 1] != '\0')
+				{
+					my_putchar(format[i]);
+					my_putchar(format[i + 1]);
+					counter = counter + 2;
+				}
+				else
+					return (-1);
 			}
 			i = i + 1;
 		}

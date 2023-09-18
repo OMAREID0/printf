@@ -34,7 +34,7 @@ int print_string(va_list arg)
  * print_persent function to print (%)
  * Return: (1)
  */
-int print_percent(va_list arg)
+int print_percent(__attribute__((unused))va_list arg)
 {
 	my_putchar('%');
 	return (1);
