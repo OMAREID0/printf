@@ -31,7 +31,7 @@ int _printf(const char *format, ...)
 
 	va_start(arg, format);
 
-	printed_chars = handler(format, function_list, arg);
+	printed_chars = handler(format, list, arg);
 	va_end(arg);
 	return (printed_chars);
 }
