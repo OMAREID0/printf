@@ -6,7 +6,7 @@
  *
  * Return: the amount of number printed.
  */
-int print_decimal(int var_list)
+int print_decimal(va_list arg)
 {
 	int count = 0;
 	int remainder;
@@ -26,4 +26,3 @@ int print_decimal(int var_list)
 	}
 	return (count);
 }
-

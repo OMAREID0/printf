@@ -15,7 +15,9 @@ typedef struct function_list list_t;
 int handler(const char *format, list_t list[], va_list arg);
 int _printf(const char *format, ...);
 int my_putchar(char);
-int print_string(va_list list);
-int print_percent(va_list list);
-int print_char(va_list list);
-int print_decimal(int var_list);
+int print_string(va_list arg);
+int print_percent(va_list arg;
+int print_char(va_list arg);
+int print_decimal(va_list arg);
+
+#endif
