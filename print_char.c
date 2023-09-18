@@ -25,8 +25,9 @@ int print_string(va_list arg)
 		string = "(null)";
 
 	for (i = 0; string[i] != '\0'; i++)
+	{
 		my_putchar(string[i]);
-
+	}
 	return (i);
 }
 

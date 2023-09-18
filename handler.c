@@ -6,12 +6,11 @@ int handler(const char *format, list_t list[], va_list arg)
 	int i, j, counter, value;
 
 	counter = 0;
-
 	for (i = 0; format[i] != '\0' ; i++)
 	{
-		if (format[i] == "%")
+		if (format[i] == '%')
 		{
-			for (j = 0; list[j].spec != NULL ; j++)
+			for (j = 0; list[j].spec != NULL; j++)
 			{
 				if (format[i + 1] == list[j].spec[0])
 				{
