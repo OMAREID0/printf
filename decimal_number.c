@@ -12,7 +12,7 @@ int print_decimal(va_list arg)
 	int div = 1;
 	int n;
 
-	n = var_arg(arg, int)
+	n = va_arg(arg, int);
 	if (n < 0)
 	{
 		count += my_putchar('-');
