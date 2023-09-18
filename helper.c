@@ -60,7 +60,8 @@ int put_binary(va_list arg)
     int i, len;
     char *ptr;
 
-    n = x;
+    n = va_arg(arg, unsigned int); // Correctly retrieve the argument from va_list
+
     if (n == 0)
         return my_putchar('0');
     if (n < 1)
