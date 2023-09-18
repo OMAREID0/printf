@@ -4,9 +4,9 @@
  * print char - print character gaven from list
  * Return: (1)
  */
-int print_char(va_list list)
+int print_char(va_list arg)
 {
-	my_putchar(va_arg(list, int));
+	my_putchar(va_arg(arg, int));
 	return (1);
 }
 
@@ -14,12 +14,12 @@ int print_char(va_list list)
  * print_string - function to print string
  * Return: number of char printed
  */
-int print_string(va_list list)
+int print_string(va_list arg)
 {
 	int i;
 	char *string;
 
-	string = va_arg(list, char *);
+	string = va_arg(arg, char *);
 
 	if (string == NULL)
 		string = "(null)";
@@ -34,7 +34,7 @@ int print_string(va_list list)
  * print_persent function to print (%)
  * Return: (1)
  */
-int print_percent(va_list list)
+int print_percent(va_list arg)
 {
 	my_putchar('%');
 	return (1);
