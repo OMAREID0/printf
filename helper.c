@@ -6,24 +6,26 @@
  */
 char *rev_string(char *s)
 {
-    int length = 0;
-    int start, end;
-    char temp;
+	int len;
+	int head;
+	char tmp;
+	char *dest;
 
-    while (s[length] != '\0') {
-        length++;
-    }
+	for (len = 0; s[len] != '\0'; len++)
+	{}
 
-    start = 0;
-    end = length - 1;
-    while (start < end)
-    {
-        temp = s[start];
-        s[start] = s[end];
-        s[end] = temp;
-        start++;
-        end--;
-    }
+	dest = malloc(sizeof(char) * len + 1);
+	if (dest == NULL)
+		return (NULL);
+
+	_memcpy(dest, s, len);
+	for (head = 0; head < len; head++, len--)
+	{
+		tmp = dest[len - 1];
+		dest[len - 1] = dest[head];
+		dest[head] = tmp;
+	}
+	return (dest);
 }
 
 /**
@@ -60,8 +62,7 @@ int put_binary(va_list arg)
     int i, len;
     char *ptr;
 
-    n = va_arg(arg, unsigned int); // Correctly retrieve the argument from va_list
-
+    n = va_arg(arg, unsigned int);
     if (n == 0)
         return my_putchar('0');
     if (n < 1)
@@ -83,4 +84,14 @@ int put_binary(va_list arg)
     put_base(ptr);
     free(ptr);
     return len;
+}
+
+char *_memcpy(char *dest, char *src, unsigned int n)
+{
+	unsigned int i;
+
+	for (i = 0; i < n; i++)
+		dest[i] = src[i];
+	dest[i] = '\0';
+	return (dest);
 }

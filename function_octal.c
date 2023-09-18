@@ -29,7 +29,7 @@ int print_octal(va_list arg)
 
     for (len = 0; num > 0; len++)
     {
-        octal[len] = (num % 8) + '0'; // Use '0' instead of 48 for ASCII value
+        octal[len] = (num % 8) + '0';
         num = num / 8;
     }
     octal[len] = '\0';
@@ -45,5 +45,5 @@ int print_octal(va_list arg)
     free(octal);
     free(rev_str);
 
-    return len; // Return the length of the octal representation
+    return len;
 }

@@ -19,12 +19,17 @@ int print_string(va_list arg);
 int print_percent(va_list arg);
 int print_char(va_list arg);
 int print_decimal(va_list arg);
+int put_binary(va_list arg);
+int print_octal(va_list arg);
 
 
 
 
 
 
-
+char *rev_string(char *s);
+unsigned int base_len(unsigned int num, int base);
+void put_base(char *anything);
+char *_memcpy(char *dest, char *src, unsigned int n);
 
 #endif
