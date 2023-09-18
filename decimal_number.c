@@ -27,5 +27,6 @@ int print_decimal(va_list arg)
 		count += my_putchar('0' + num / div);
 		num %= div;
 		div /= 10;
+	}
 	return (count);
 }
