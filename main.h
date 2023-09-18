@@ -7,8 +7,8 @@
 
 struct function_list
 {
-  char *spec;
-  int (*fun)(va_list);
+	char *spec;
+	int (*fun)(va_list);
 };
 typedef struct function_list list_t;
 

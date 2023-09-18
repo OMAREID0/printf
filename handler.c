@@ -1,6 +1,14 @@
 #include "main.h"
 
-
+/**
+ * handler - function to search in input string for specifier
+ * when % founded replace it with function to deal with va_list
+ * @format: string gavin to print it for the user
+ * @list: list of function and specifiers to seal with argument
+ * @arg: number of arguments to print it
+ *
+ * Return: return number of printed charchters (counter)
+ */
 int handler(const char *format, list_t list[], va_list arg)
 {
 	int i, j, counter, value;

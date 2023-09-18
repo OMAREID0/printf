@@ -22,7 +22,7 @@ int print_decimal(va_list arg)
 	{
 		div *= 10;
 	}
-	while(div != 0)
+	while (div != 0)
 	{
 		count += my_putchar('0' + n / div);
 		n %= div;
