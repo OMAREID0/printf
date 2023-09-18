@@ -4,7 +4,8 @@
  * rev_string - Reverses a string.
  * @s: The input string to be reversed.
  */
-void rev_string(char *s) {
+char *rev_string(char *s)
+{
     int length = 0;
     int start, end;
     char temp;
@@ -15,7 +16,8 @@ void rev_string(char *s) {
 
     start = 0;
     end = length - 1;
-    while (start < end) {
+    while (start < end)
+    {
         temp = s[start];
         s[start] = s[end];
         s[end] = temp;
@@ -31,7 +33,8 @@ void rev_string(char *s) {
  *
  * Return:the length of the number whent it is converted.
  */
-unsigned int base_len(unsigned int num, int base) {
+unsigned int base_len(unsigned int num, int base)
+{
     unsigned int i;
 
     for (i = 0; num > 0; ++i)
@@ -43,14 +46,16 @@ unsigned int base_len(unsigned int num, int base) {
  * put_base - prints any pointer content.
  * @anything: content to print.
  */
-void put_base(char *anything) {
+void put_base(char *anything)
+{
     unsigned int i;
 
-    for (i = 0; anything[i]; ++i)
+    for (i = 0; anything[i] != '\0'; ++i)
         my_putchar(anything[i]);
 }
 
-int put_binary(int x) {
+int put_binary(va_list arg)
+{
     unsigned int n;
     int i, len;
     char *ptr;
@@ -64,7 +69,8 @@ int put_binary(int x) {
     ptr = (char *)malloc(len + 1);
     if (ptr == NULL)
         return -1;
-    for (i = 0; n > 0; ++i) {
+    for (i = 0; n > 0; ++i)
+    {
         if (n % 2 == 0)
             ptr[i] = '0';
         else
