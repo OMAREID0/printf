@@ -25,7 +25,7 @@ int handler(const char *format, list_t list[], va_list arg)
 					value = list[j].fun(arg);
 					if (value == -1)
 						return (-1);
-					counter += value;
+					counter = counter + value;
 					break;
 				}
 			}
