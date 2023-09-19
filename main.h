@@ -34,6 +34,7 @@ int unsigned_integer(va_list arg);
 int print_reversed(va_list arg);
 int print_heX(va_list arg);
 int print_hex(va_list arg);
+int rot13(va_list arg);
 /**
  * helper functions
  */
