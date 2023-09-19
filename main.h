@@ -21,7 +21,8 @@ int print_char(va_list arg);
 int print_decimal(va_list arg);
 int put_binary(va_list arg);
 int print_octal(va_list arg);
-
+int unsigned_integer(va_list arg);
+int print_reversed(va_list arg);
 
 
 
