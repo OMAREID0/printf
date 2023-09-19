@@ -36,7 +36,7 @@ int print_hex(va_list arg)
 	rev_hex = rev_string(hex_rep);
 	if (rev_hex == NULL)
 		return (-1);
-	write_base(rev_hex);
+	put_base(rev_hex);
 	free(rev_hex);
 	return (len);
 }
@@ -76,7 +76,7 @@ int print_heX(va_list arg)
 	rev_hex = rev_string(hex_rep);
 	if (rev_hex == NULL)
 		return (-1);
-	write_base(rev_hex);
+	put_base(rev_hex);
 	free(rev_hex);
 	return (len);
 }
