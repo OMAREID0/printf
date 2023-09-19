@@ -5,7 +5,7 @@
  * @arg: List of the arguments passed to the function
  * Return: Number of characters printed
  */
-int print_heX(va_list arg)
+int print_hex(va_list arg)
 {
 	unsigned int num;
 	int len = 0;
