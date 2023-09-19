@@ -32,10 +32,12 @@ int put_binary(va_list arg);
 int print_octal(va_list arg);
 int unsigned_integer(va_list arg);
 int print_reversed(va_list arg);
-
+int print_heX(va_list arg);
+int print_hex(va_list arg);
 /**
  * helper functions
  */
+int hex_check(int num, char x);
 char *rev_string(char *s);
 unsigned int base_len(unsigned int num, int base);
 void put_base(char *anything);
