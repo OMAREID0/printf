@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * print_hex - Prints a representation of a decimal number on base16 lowercase
  * @arg: List of the arguments passed to the function
@@ -6,12 +7,13 @@
  */
 int print_heX(va_list arg)
 {
-	unsigned int num = va_arg(arg, unsigned int);
+	unsigned int num;
 	int len = 0;
 	int rem_num;
 	char hex_rep[20];
 	char *rev_hex;
 
+	num = va_arg(arg, unsigned int);
 	if (num == 0)
 		return (my_putchar('0'));
 	if (num < 1)
@@ -45,12 +47,13 @@ int print_heX(va_list arg)
  */
 int print_heX(va_list arg)
 {
-	unsigned int num = va_arg(arg, unsigned int);
+	unsigned int num;
 	int len = 0;
 	int rem_num;
 	char hex_rep[20];
 	char *rev_hex;
 
+	num = va_arg(arg, unsigned int);
 	if (num == 0)
 		return (my_putchar('0'));
 	if (num < 1)
