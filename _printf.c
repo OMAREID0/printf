@@ -1,10 +1,11 @@
 #include "main.h"
 
 /**
- * _printf - function to print whatever write in
- * @format: array of string to print it on the screen
+ * printf - Custom printf function.
+ * @format: A format string containing format specifiers.
+ * @...: Variable number of arguments corresponding to format specifiers.
  *
- * Return: return number of printed charchters (counter)
+ * Return: The total number of characters printed, or -1 on error.
  */
 int _printf(const char *format, ...)
 {

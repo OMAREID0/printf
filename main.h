@@ -4,7 +4,13 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdarg.h>
+#include <stdio.h>
 
+/**
+ * struct function_list - A structure to hold function pointers and their specifications.
+ * @spec: A pointer to a character string describing the function's specifications.
+ * @fun: A pointer to a function that takes a va_list as an argument and returns an integer.
+ */
 struct function_list
 {
 	char *spec;
@@ -12,6 +18,9 @@ struct function_list
 };
 typedef struct function_list list_t;
 
+/**
+ * main functions to handel specifers
+ */
 int handler(const char *format, list_t list[], va_list arg);
 int _printf(const char *format, ...);
 int my_putchar(char);
@@ -24,10 +33,9 @@ int print_octal(va_list arg);
 int unsigned_integer(va_list arg);
 int print_reversed(va_list arg);
 
-
-
-
-
+/**
+ * helper functions
+ */
 char *rev_string(char *s);
 unsigned int base_len(unsigned int num, int base);
 void put_base(char *anything);

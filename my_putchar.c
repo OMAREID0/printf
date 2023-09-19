@@ -1,10 +1,12 @@
 #include "main.h"
 
 /**
- * my_putchar - function that print char to stdout
- * @c: the character to print.
+ * my_putchar - Print a single character to the standard output.
+ * @c: The character to be printed.
  *
- * Return: on success one
+ * Return: 
+ * On success, returns the number of bytes written (1).
+ * On error, returns -1 and sets errno accordingly.
  */
 int my_putchar(char c)
 {

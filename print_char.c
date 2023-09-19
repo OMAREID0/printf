@@ -1,8 +1,10 @@
 #include "main.h"
 
 /**
- * print char - print character gaven from list
- * Return: (1)
+ * print_char - Print a character.
+ * @arg: A va_list containing the character to be printed.
+ *
+ * Return: Always returns 1 after successfully printing a character.
  */
 int print_char(va_list arg)
 {
@@ -11,8 +13,10 @@ int print_char(va_list arg)
 }
 
 /**
- * print_string - function to print string
- * Return: number of char printed
+ * print_string - Print a string.
+ * @arg: A va_list containing the string to be printed.
+ *
+ * Return: The number of characters printed (excluding the null terminator).
  */
 int print_string(va_list arg)
 {
@@ -32,8 +36,10 @@ int print_string(va_list arg)
 }
 
 /**
- * print_persent function to print (%)
- * Return: (1)
+ * print_percent - Print a percent symbol ("%").
+ * @arg: A va_list (unused in this function).
+ *
+ * Return: Always returns 1 after successfully printing a percent symbol.
  */
 int print_percent(__attribute__((unused))va_list arg)
 {
