@@ -7,9 +7,9 @@
 #include <stdio.h>
 
 /**
- * struct function_list - A structure to hold function pointers and their specifications.
- * @spec: A pointer to a character string describing the function's specifications.
- * @fun: A pointer to a function that takes a va_list as an argument and returns an integer.
+ * struct function_list - A structure to hold function pointers and their spec
+ * @spec: A pointer to a character string describing the function's speci
+ * @fun: A pointer to a function that takes a va_list as argument and retur
  */
 struct function_list
 {
